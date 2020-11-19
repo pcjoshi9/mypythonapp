@@ -1,11 +1,15 @@
 # set base image (host OS)
 FROM python:3.8
 
+# Cloning shared core repo - test
+RUN git clone https://github.com/pcjoshi9/base-core.git
+
 # set the working directory in the container
 WORKDIR /code
 
 # copy the dependencies file to the working directory
 COPY requirements.txt .
+COPY template .
 
 # install dependencies
 RUN pip install -r requirements.txt
