@@ -3,7 +3,7 @@ server = Flask(__name__,template_folder='template')
 
 @server.route("/")
 def mypythonapp():
-  return "This is a sample app to test multi repo with common core code" 
+  return "This is a sample app to test multi repo with common core code... Check out http://localhost:5000/base " 
 
 f = open("/base-core/folder2/file2.txt", "r")
 print(f.read())
